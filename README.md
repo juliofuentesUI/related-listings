@@ -1,6 +1,6 @@
 # Project Name
 
-> Project description
+> Front-end capstone - AirBnb
 
 ## Related Projects
 
