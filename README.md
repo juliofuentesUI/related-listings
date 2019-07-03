@@ -8,8 +8,8 @@
   - https://github.com/team-200-ok/related-listings
   - https://github.com/team-200-ok/bookings-proxy
   - https://github.com/team-200-ok/bookings
-  - https://github.com/team-200-ok/overview-carousel-proxy
-  - https://github.com/team-200-ok/overview-carousel
+  - https://github.com/team-200-ok/gallery-modal-overview-proxy
+  - https://github.com/team-200-ok/gallery-modal-overview
   - https://github.com/team-200-ok/reviews-proxy
   - https://github.com/team-200-ok/reviews
 
@@ -21,7 +21,8 @@
 
 ## Usage
 
-> Some usage instructions
+> A web application to show off our front-end skills using React, Express, (insert database here), and (insert 
+more technologies used here).
 
 ## Requirements
 
