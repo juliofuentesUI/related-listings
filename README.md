@@ -4,10 +4,14 @@
 
 ## Related Projects
 
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
-  - https://github.com/teamName/repo
+  - https://github.com/team-200-ok/related-listings-proxy
+  - https://github.com/team-200-ok/related-listings
+  - https://github.com/team-200-ok/bookings-proxy
+  - https://github.com/team-200-ok/bookings
+  - https://github.com/team-200-ok/overview-carousel-proxy
+  - https://github.com/team-200-ok/overview-carousel
+  - https://github.com/team-200-ok/reviews-proxy
+  - https://github.com/team-200-ok/reviews
 
 ## Table of Contents
 
@@ -33,7 +37,7 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install -g webpack
+npm install webpack
 npm install
 ```
 
