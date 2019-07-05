@@ -1,13 +1,24 @@
-const mysql = require('myself');
+const mysql = require('mysql');
+// const faker = require('faker');
 
-const connection = mysql.createConnection({
+let connection = mysql.createConnection({
   host: 'localhost',
-  user: 'me',
+  user: 'root',
   password: '',
-  database: 'INPUT TEXT HERE'
+  database: 'related_listings'
 });
 
-connection.connect();
+connection.connect((err) => {
+  if(err){
+    console.log(err);
+    return;
+  } else {
+    console.log("connection secured");
+  }
+});
+
+module.exports = connection;
+
 
 /* 
 
