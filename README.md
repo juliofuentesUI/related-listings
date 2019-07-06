@@ -38,7 +38,12 @@ An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
 From within the root directory:
 
 ```sh
-npm install webpack
-npm install
+npm install webpack webpack-cli
+npm install express body-parser
+npm install react react-dom
+npm install @babel/core @babel/preset-env @babel/preset-react babel-loader --save-dev
+npm install nodemon
+npm install mysql
+npm install puppeteer
 ```
 
