@@ -6,7 +6,7 @@ class App extends React.Component{
     super(props);
 
     this.state = {
-      roomInfo: null
+      roomInfo: []
     }
   }
 
@@ -32,11 +32,13 @@ class App extends React.Component{
         <div>
           <span className="rooms-title">More places to stay</span>
         </div>
-        <div>
-          {/* {this.state.roomInfo.map(singleInfo => {
-            <Carousel roomInfo={singleInfo} />
-          })} */}
-          <Carousel roomInfo={this.state.roomInfo}/>
+        <div className="carousel-container">
+            <Carousel roomInfo={this.state.roomInfo}/>
+            <Carousel roomInfo={this.state.roomInfo}/>
+            <Carousel roomInfo={this.state.roomInfo}/>
+            <Carousel roomInfo={this.state.roomInfo}/>
+            <Carousel roomInfo={this.state.roomInfo}/>
+
         </div>
       </div>
     )

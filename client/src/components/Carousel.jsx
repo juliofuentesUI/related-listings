@@ -20,9 +20,9 @@ class Carousel extends React.Component{
           <p className="room-details-room-name">ENTIRE HOUSE - SHINJUKU</p>
           <p className="room-details-room-info">FULL TRIP - BOOK NOW</p>
           <p className="room-details-room-price">$14/night</p>
-          {/* <span>{this.props.roomInfo[0].stars}</span> */}
-          {/* {console.log(this.props)}
-          {console.log(this.props.roomInfo)} */}
+          {setTimeout(() => {
+            <span>{this.props.roomInfo[0].stars}</span>
+          }, 0)}
         </span>
       </div>
     )
