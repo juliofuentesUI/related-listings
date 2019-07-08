@@ -35,8 +35,14 @@ CREATE TABLE listings(
   FOREIGN KEY (reviews_id) REFERENCES reviews (reviews_id)
 );
 
+CREATE TABLE user_info_testing(
+  user_info_id int NOT NULL PRIMARY KEY,
+  first_name text NOT NULL,
+  last_name text NOT NULL
+);
 
--- use mysql -uroot < ./database/Schema.sql
+
+-- use mysql -uroot < ./server/Schema.sql
 -- this initiates the database/tables
 -- also deletes the old database being used
 -- start from scratch

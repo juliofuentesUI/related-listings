@@ -10,7 +10,8 @@
   "scripts": {
     "build": "webpack -d --watch",
     "start": "nodemon server/index.js",
-    "seed": "node ./server/db/seed.js"
+    "seed": "node ./server/db/seed.js",
+    "test": "jest"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -26,6 +27,7 @@
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
+    "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",

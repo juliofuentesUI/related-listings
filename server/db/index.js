@@ -11,8 +11,6 @@ connection.connect((err) => {
   if(err){
     console.log(err);
     return;
-  } else {
-    console.log("connection secured");
   }
 });
 
