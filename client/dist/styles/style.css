@@ -6,7 +6,6 @@
   line-height: 30px;
   font-weight: 600;
   color: #484848;
-
 }
 
 /* room listings main container */
@@ -20,7 +19,7 @@
 
 .related-listings {
   width: 75%;
-  height: 40%;
+  height: 50%;
   /* border: 1px solid black; */
   box-sizing: border-box;
   overflow-x: hidden;
@@ -31,6 +30,7 @@
 .carousel-container {
   display: flex;
   flex-flow: row;
+  margin-top: 3%;
 }
 
 /* room details */
@@ -61,3 +61,13 @@
   color: #484848;
   margin: 0;
 }
+
+.room-details-star-image {
+  background-image: "data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/…3 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z'/%3E%3C/svg%3E";
+}
+
+/* image */
+
+/* .test-image {
+  margin-right: 10px;
+} */
