@@ -38,7 +38,11 @@ class App extends React.Component{
             <Carousel roomInfo={this.state.roomInfo}/>
             <Carousel roomInfo={this.state.roomInfo}/>
             <Carousel roomInfo={this.state.roomInfo}/>
-
+            <Carousel roomInfo={this.state.roomInfo}/>
+            <Carousel roomInfo={this.state.roomInfo}/>
+            <Carousel roomInfo={this.state.roomInfo}/>
+            <Carousel roomInfo={this.state.roomInfo}/>
+            <Carousel roomInfo={this.state.roomInfo}/>
         </div>
       </div>
     )
