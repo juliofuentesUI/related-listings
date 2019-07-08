@@ -13,8 +13,9 @@ CREATE TABLE reviews(
   reviews_id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
   username text NOT NULL,
   review_date text NOT NULL,
-  user_comment text NOT NULL
-  -- user_info_id int FOREIGN KEY REFERENCES user_info(user_info_id)
+  user_comment text NOT NULL,
+  user_info_id int,
+  FOREIGN KEY (user_info_id) REFERENCES user_info (user_info_id)
 );
 
 CREATE TABLE listings(
@@ -29,12 +30,19 @@ CREATE TABLE listings(
   room__host_name text NOT NULL,
   about_room text NOT NULL,
   about_space text NOT NULL,
-  about_neighborhood text NOT NULL
-  -- reviews_id int FOREIGN KEY REFERENCES reviews(reviews_id)
+  about_neighborhood text NOT NULL,
+  reviews_id int,
+  FOREIGN KEY (reviews_id) REFERENCES reviews (reviews_id)
+);
+
+CREATE TABLE user_info_testing(
+  user_info_id int NOT NULL PRIMARY KEY,
+  first_name text NOT NULL,
+  last_name text NOT NULL
 );
 
 
--- use mysql -uroot < ./database/Schema.sql
+-- use mysql -uroot < ./server/Schema.sql
 -- this initiates the database/tables
 -- also deletes the old database being used
 -- start from scratch

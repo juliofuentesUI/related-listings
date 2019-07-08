@@ -1,0 +1,73 @@
+/* room listings title */
+
+.rooms-title {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #484848;
+}
+
+/* room listings main container */
+
+.testBox {
+  /* border: 1px solid black; */
+  border-radius: 2%;
+  width: 350px;
+  height: 55%;
+}
+
+.related-listings {
+  width: 75%;
+  height: 50%;
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* carousel container */
+
+.carousel-container {
+  display: flex;
+  flex-flow: row;
+  margin-top: 3%;
+}
+
+/* room details */
+
+.room-details-room-name {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  line-height: 16px;
+  font-size: 12px;
+  color: #767676;
+  margin: 0;
+}
+
+.room-details-room-info {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-size: 16px;
+  color: #484848;
+  margin: 0;
+}
+
+.room-details-room-price {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 18px;
+  font-size: 14px;
+  color: #484848;
+  margin: 0;
+}
+
+.room-details-star-image {
+  background-image: "data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/…3 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z'/%3E%3C/svg%3E";
+}
+
+/* image */
+
+/* .test-image {
+  margin-right: 10px;
+} */
