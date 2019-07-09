@@ -17,7 +17,7 @@ app.get('/rooms/testing', (req, res) => {
 })
 
 app.get('/rooms/related-listings', (req, res) => {
-  let queryString = "SELECT * FROM listings WHERE listings_id=1";
+  let queryString = "SELECT * FROM listings";
   db.query(queryString, (err, rows, fields) => {
     res.json(rows);
   })

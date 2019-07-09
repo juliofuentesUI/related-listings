@@ -33,16 +33,16 @@ class App extends React.Component{
           <span className="rooms-title">More places to stay</span>
         </div>
         <div className="carousel-container">
-            <Carousel roomInfo={this.state.roomInfo}/>
-            <Carousel roomInfo={this.state.roomInfo}/>
-            <Carousel roomInfo={this.state.roomInfo}/>
-            <Carousel roomInfo={this.state.roomInfo}/>
-            <Carousel roomInfo={this.state.roomInfo}/>
-            <Carousel roomInfo={this.state.roomInfo}/>
-            <Carousel roomInfo={this.state.roomInfo}/>
-            <Carousel roomInfo={this.state.roomInfo}/>
-            <Carousel roomInfo={this.state.roomInfo}/>
-            <Carousel roomInfo={this.state.roomInfo}/>
+            <Carousel roomInfo={this.props.testData}/>
+            <Carousel roomInfo={this.props.testData}/>
+            <Carousel roomInfo={this.props.testData}/>
+            <Carousel roomInfo={this.props.testData}/>
+            <Carousel roomInfo={this.props.testData}/>
+            <Carousel roomInfo={this.props.testData}/>
+            <Carousel roomInfo={this.props.testData}/>
+            <Carousel roomInfo={this.props.testData}/>
+            <Carousel roomInfo={this.props.testData}/>
+            <Carousel roomInfo={this.props.testData}/>
         </div>
       </div>
     )

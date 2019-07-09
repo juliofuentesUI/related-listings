@@ -33,6 +33,19 @@
   margin-top: 3%;
 }
 
+/* button left */
+
+.button-left {
+  width: 40px;
+  height: 40px;
+}
+
+/* button right */
+
+/* .button-right {
+
+} */
+
 /* room details */
 
 .room-details-room-name {
@@ -62,12 +75,22 @@
   margin: 0;
 }
 
-.room-details-star-image {
-  background-image: "data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/…3 28-39 52-39 25 0 47 17 54 41l87 277h280c24 0 45 16 53 40z'/%3E%3C/svg%3E";
+.star-img {
+ height: 10px;
+}
+
+.star-number {
+  color: #484848;
+  display: inline-block;
+  font-size: 12px;
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  line-height: 16px;
+  margin-left: 8px;
 }
 
 /* image */
 
-/* .test-image {
+.test-image {
   margin-right: 10px;
-} */
+}
