@@ -28,12 +28,20 @@ class App extends React.Component{
 
   render(){
     return(
-      <div className="related-listings">
-        <div>
-          <span className="rooms-title">More places to stay</span>
+      <div className="main-container">
+        <div className="button-container">
+          <div className="left-button"></div>
         </div>
-        <div className="carousel-container">
-            <Carousel roomInfo={this.state.roomInfo}/>
+        <div className="related-listings">
+          <div>
+            <span className="rooms-title">More places to stay</span>
+          </div>
+          <div className="carousel-container">
+              <Carousel roomInfo={this.state.roomInfo}/>
+          </div>
+        </div>
+        <div className="button-container">
+          <div className="right-button"></div>
         </div>
       </div>
     )

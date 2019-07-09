@@ -1,6 +1,36 @@
+/* main container */
+
+/* .main-container {
+  border: 1px solid red;
+} */
+
+/* buttons */
+
+.button-container {
+  display: inline-block;
+  transform: translateY(-200px);
+}
+
+.left-button {
+  background-image: url('../images/arrowLeft.png');
+  color: rgba(0, 0, 0, 0.847);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.right-button {
+  background-image: url('../images/arrowRight.png');
+  color: rgba(0, 0, 0, 0.847);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
 /* room listings title */
 
-.rooms-title {
+.rooms-title {  
+  /* border: 1px solid black; */
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
   font-size: 24px;
   line-height: 30px;
@@ -19,6 +49,7 @@
 }
 
 .related-listings {
+  display: inline-block;
   width: 74.2%;
   height: 50%;
   /* border: 1px solid black; */
@@ -57,7 +88,7 @@
   line-height: 22px;
   font-size: 16px;
   color: #484848;
-  margin: 0;
+  margin: 0 0 4px 0;
 }
 
 .room-details-room-price {
@@ -71,6 +102,7 @@
 
 .room-details-star-image {
   display: inline-block;
+  margin: 0;
 }
 
 /* Review Star Image */
