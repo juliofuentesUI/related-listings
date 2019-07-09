@@ -43,16 +43,16 @@ class Modal extends React.Component {
             </div>
             <div>
               <div>
-                <img src="" alt="testfornow"></img>
+                <img className="small-img" src={this.props.roomInfo[0].room_img} alt="testfornow"></img>
               </div>
-              <span><p>Place Name</p></span>
+              <span><p>{this.props.roomInfo[0].roomname}</p></span>
               <span><p>Place info</p></span>
               <span>STARS / REVEIWS HURRR</span>
             </div>
           </div>
         </div>
       ) : (
-        <Carousel />
+        <Carousel roomInfo={this.props.roomInfo}/>
       )
     )
   }
