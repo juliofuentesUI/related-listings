@@ -10,19 +10,20 @@
 
 /* room listings main container */
 
-.testBox {
+.listing-img {
   /* border: 1px solid black; */
   border-radius: 2%;
-  width: 350px;
-  height: 55%;
+  width: 300px;
+  height: 250px;
+  cursor: pointer;
 }
 
 .related-listings {
-  width: 75%;
+  width: 74.2%;
   height: 50%;
   /* border: 1px solid black; */
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 /* carousel container */
@@ -33,18 +34,11 @@
   margin-top: 3%;
 }
 
-/* button left */
+/* Information container */
 
-.button-left {
-  width: 40px;
-  height: 40px;
+.info-container {
+  cursor: pointer;
 }
-
-/* button right */
-
-/* .button-right {
-
-} */
 
 /* room details */
 
@@ -75,6 +69,8 @@
   margin: 0;
 }
 
+/* Review Star Image */
+
 .star-img {
  height: 10px;
 }
@@ -91,6 +87,7 @@
 
 /* image */
 
-.test-image {
-  margin-right: 10px;
+.img-container {
+  margin-right: 15px;
+  border-radius: 1%;
 }
