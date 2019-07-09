@@ -127,3 +127,15 @@
   margin-right: 15px;
   border-radius: 1%;
 }
+
+.listing-img{
+  position: relative;
+}
+
+/* heart image */
+
+.heart-icon {
+  position: absolute;
+  top: 75px;
+  left: 310px;
+}
