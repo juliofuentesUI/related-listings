@@ -1,6 +1,36 @@
+/* main container */
+
+/* .main-container {
+  border: 1px solid red;
+} */
+
+/* buttons */
+
+.button-container {
+  display: inline-block;
+  transform: translateY(-200px);
+}
+
+.left-button {
+  background-image: url('../images/arrowLeft.png');
+  color: rgba(0, 0, 0, 0.847);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.right-button {
+  background-image: url('../images/arrowRight.png');
+  color: rgba(0, 0, 0, 0.847);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
 /* room listings title */
 
-.rooms-title {
+.rooms-title {  
+  /* border: 1px solid black; */
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
   font-size: 24px;
   line-height: 30px;
@@ -10,19 +40,21 @@
 
 /* room listings main container */
 
-.testBox {
+.listing-img {
   /* border: 1px solid black; */
   border-radius: 2%;
-  width: 350px;
-  height: 55%;
+  width: 300px;
+  height: 250px;
+  cursor: pointer;
 }
 
 .related-listings {
-  width: 75%;
+  display: inline-block;
+  width: 74.2%;
   height: 50%;
   /* border: 1px solid black; */
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow-x: auto;
 }
 
 /* carousel container */
@@ -33,18 +65,11 @@
   margin-top: 3%;
 }
 
-/* button left */
+/* Information container */
 
-.button-left {
-  width: 40px;
-  height: 40px;
+.info-container {
+  cursor: pointer;
 }
-
-/* button right */
-
-/* .button-right {
-
-} */
 
 /* room details */
 
@@ -63,7 +88,7 @@
   line-height: 22px;
   font-size: 16px;
   color: #484848;
-  margin: 0;
+  margin: 0 0 4px 0;
 }
 
 .room-details-room-price {
@@ -74,6 +99,13 @@
   color: #484848;
   margin: 0;
 }
+
+.room-details-star-image {
+  display: inline-block;
+  margin: 0;
+}
+
+/* Review Star Image */
 
 .star-img {
  height: 10px;
@@ -91,6 +123,27 @@
 
 /* image */
 
-.test-image {
-  margin-right: 10px;
+.img-container {
+  margin-right: 15px;
+  border-radius: 1%;
+}
+
+.listing-img{
+  position: relative;
+}
+
+/* heart image */
+
+.heart-icon {
+  position: absolute;
+  top: 75px;
+  left: 310px;
+}
+
+/* MODAL */
+
+.x-button {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
 }
