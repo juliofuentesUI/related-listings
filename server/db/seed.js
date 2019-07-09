@@ -2,7 +2,7 @@ const db = require('./index');
 const faker = require('faker');
 
 let roomNames = ['ENTIRE HOUSE - Shinjuku', 'ENTIRE HOUSE - Hokone', 'ENTIRE VILLA - Atami-shi', 'ENTIRE HOUSE - Fujiyoshida-shi', 'ENTIRE VILLA - Minamitsuru-Gun', 'ENTIRE CONOMINDIUM - Hokone-Machi', 'ENTIRE APARTMENT - Yamanakako'];
-let roomLocations = ['SORA VILLA FUJI', `Y''s Village Fukuori`, 'Traditional Japanese House In Nature', 'E-Joy House', 'Close to train station!', 'Itadaki Senpai'];
+let roomLocations = ['SORA VILLA FUJI', `Y''s Village Fukuori`, 'Traditional Japanese House In Nature', 'E-Joy House', 'Close to train station!', 'Quiet and near Shinjuku station'];
 let roomImgs = [`${faker.image.city()}`, `${faker.image.nature()}`, `${faker.image.people()}`, `${faker.image.people()}`, `${faker.image.avatar()}`, `${faker.image.cats()}`];
 let lastNames = ['Cryus', 'Benzei', 'Gombei', 'Tonjuro', 'Ochaco', 'Bberry', 'Aaron', 'Gether', 'Floss'];
 let firstNames = ['Ochaco', 'Ningen', 'Luna', 'Lidica', 'Yuna', 'Straze', 'Bellona', 'Li', 'Lisa'];

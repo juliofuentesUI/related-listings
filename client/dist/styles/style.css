@@ -69,6 +69,10 @@
   margin: 0;
 }
 
+.room-details-star-image {
+  display: inline-block;
+}
+
 /* Review Star Image */
 
 .star-img {
