@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from './Modal.jsx';
 const faker = require('faker');
 
 class Carousel extends React.Component{
@@ -6,12 +7,21 @@ class Carousel extends React.Component{
     super(props);
 
     this.state = {
-      roomInfo: []
+      roomInfo: [],
+      heartClicked: false
     }
+
+    this.openModal = this.openModal.bind(this);
   }
 
   clickHandler(){
     console.log('CLIIIICK');
+  }
+
+  openModal(){
+    this.setState({
+      heartClicked: !this.state.heartClicked
+    })
   }
 
   render(){
@@ -23,11 +33,12 @@ class Carousel extends React.Component{
     }
     let datas = this.props.roomInfo.map((data) => {
       return(
+        !this.state.heartClicked ? (
         <div className="img-container">
           <div onClick={this.clickHandler}>
             <img className="listing-img" src={data.room_img} alt="random pic"/>
             <div>
-              <svg className="heart-icon" viewBox="0 0 24 24" fill="#484848" fillOpacity="0.5" stroke="#ffffff" strokeWidth="2" focusable="false" aria-label="Add listing to a list" role="img" strokeLinecap="round" strokeLinejoin="round" style={svgStyles}><path d="m17.5 2.9c-2.1 0-4.1 1.3-5.4 2.8-1.6-1.6-3.8-3.2-6.2-2.7-1.5.2-2.9 1.2-3.6 2.6-2.3 4.1 1 8.3 3.9 11.1 1.4 1.3 2.8 2.5 4.3 3.6.4.3 1.1.9 1.6.9s1.2-.6 1.6-.9c3.2-2.3 6.6-5.1 8.2-8.8 1.5-3.4 0-8.6-4.4-8.6" strokeLinejoin="round"></path></svg>
+              <svg onClick={this.openModal} className="heart-icon" viewBox="0 0 24 24" fill="#484848" fillOpacity="0.5" stroke="#ffffff" strokeWidth="2" focusable="false" aria-label="Add listing to a list" role="img" strokeLinecap="round" strokeLinejoin="round" style={svgStyles}><path d="m17.5 2.9c-2.1 0-4.1 1.3-5.4 2.8-1.6-1.6-3.8-3.2-6.2-2.7-1.5.2-2.9 1.2-3.6 2.6-2.3 4.1 1 8.3 3.9 11.1 1.4 1.3 2.8 2.5 4.3 3.6.4.3 1.1.9 1.6.9s1.2-.6 1.6-.9c3.2-2.3 6.6-5.1 8.2-8.8 1.5-3.4 0-8.6-4.4-8.6" strokeLinejoin="round"></path></svg>
             </div>
           </div>
           <div className="info-container" onClick={this.clickHandler}>
@@ -73,6 +84,9 @@ class Carousel extends React.Component{
               <div className="star-number"><p className="star-number">{data.reviews_num}</p></div>
           </div>
         </div>
+        ) : (
+          <Modal />
+        )
       )
     })
     return datas;
@@ -82,4 +96,4 @@ class Carousel extends React.Component{
 export default Carousel;
 
 
-{/* <svg viewBox="0 0 24 24" fill="#484848" fillOpacity="0.5" stroke="#ffffff" strokeWidth="2" focusable="false" aria-label="Add listing to a list" role="img" strokeLinecap="round" strokeLinejoin="round" style={svgStyles}><path d="m17.5 2.9c-2.1 0-4.1 1.3-5.4 2.8-1.6-1.6-3.8-3.2-6.2-2.7-1.5.2-2.9 1.2-3.6 2.6-2.3 4.1 1 8.3 3.9 11.1 1.4 1.3 2.8 2.5 4.3 3.6.4.3 1.1.9 1.6.9s1.2-.6 1.6-.9c3.2-2.3 6.6-5.1 8.2-8.8 1.5-3.4 0-8.6-4.4-8.6" strokeLinejoin="round"></path></svg> */}
+{/* <svg viewBox="0 0 24 24" fill="#484848" fillOpacity="0.5" stroke="#ffffff" strokeWidth="2" focusable="false" aria-label="Add listing to a list" role="img" strokeLinecap="round" strokeLinejoin="round" style={svgStyles}><path d="m17.5 2.9c-2.1 0-4.1 1.3-5.4 2.8-1.6-1.6-3.8-3.2-6.2-2.7-1.5.2-2.9 1.2-3.6 2.6-2.3 4.1 1 8.3 3.9 11.1 1.4 1.3 2.8 2.5 4.3 3.6.4.3 1.1.9 1.6.9s1.2-.6 1.6-.9c3.2-2.3 6.6-5.1 8.2-8.8 1.5-3.4 0-8.6-4.4-8.6" strokeLinejoin="round"></path></svg>  */}
