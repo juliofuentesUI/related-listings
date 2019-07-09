@@ -15,10 +15,6 @@ class Carousel extends React.Component{
     this.openModal = this.openModal.bind(this);
   }
 
-  clickHandler(){
-    console.log('CLIIIICK');
-  }
-
   openModal(){
     this.setState({
       heartClicked: !this.state.heartClicked
@@ -28,7 +24,7 @@ class Carousel extends React.Component{
   render(){
     return(
       !this.state.heartClicked ? (
-        <Listings roomInfo={this.props.roomInfo} heartClicker={this.openModal}/>
+        <Listings roomInfo={this.props.roomInfo} heartClicker={this.openModal} transform={this.props.transform} />
       ) : (
         <Modal roomInfo={this.props.roomInfo} />
       )

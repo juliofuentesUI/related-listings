@@ -6,8 +6,12 @@ class App extends React.Component{
     super(props);
 
     this.state = {
-      roomInfo: []
+      roomInfo: [],
+      transform: 0
     }
+
+    this.translateXMinus = this.translateXMinus.bind(this);
+    this.translateXPlus = this.translateXPlus.bind(this);
   }
 
   componentDidMount(){
@@ -26,22 +30,34 @@ class App extends React.Component{
       })
   }
 
+  translateXMinus(){
+    this.setState({
+      transform: (this.state.transform - 105)
+    })
+  }
+
+  translateXPlus(){
+    this.setState({
+      transform: (this.state.transform + 105)
+    })
+  }
+
   render(){
     return(
       <div className="main-container">
         <div className="button-container">
-          <div className="left-button"></div>
+          <div onClick={this.translateXPlus} className="left-button"></div>
         </div>
         <div className="related-listings">
           <div>
             <span className="rooms-title">More places to stay</span>
           </div>
           <div className="carousel-container">
-              <Carousel roomInfo={this.state.roomInfo}/>
+              <Carousel roomInfo={this.state.roomInfo} transform={this.state.transform}/>
           </div>
         </div>
         <div className="button-container">
-          <div className="right-button"></div>
+          <div onClick={this.translateXMinus} className="right-button"></div>
         </div>
       </div>
     )
