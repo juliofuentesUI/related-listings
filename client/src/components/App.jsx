@@ -34,15 +34,6 @@ class App extends React.Component{
         </div>
         <div className="carousel-container">
             <Carousel roomInfo={this.props.testData}/>
-            <Carousel roomInfo={this.props.testData}/>
-            <Carousel roomInfo={this.props.testData}/>
-            <Carousel roomInfo={this.props.testData}/>
-            <Carousel roomInfo={this.props.testData}/>
-            <Carousel roomInfo={this.props.testData}/>
-            <Carousel roomInfo={this.props.testData}/>
-            <Carousel roomInfo={this.props.testData}/>
-            <Carousel roomInfo={this.props.testData}/>
-            <Carousel roomInfo={this.props.testData}/>
         </div>
       </div>
     )
