@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from './Modal.jsx';
+import LoveHeart from './LoveHeart.jsx';
 
 class Listings extends React.Component {
   constructor(props){
@@ -9,17 +10,10 @@ class Listings extends React.Component {
       roomInfo: [],
       heartClicked: false
     }
-
-    this.otherClickHandler = this.otherClickHandler.bind(this);
   }
 
   clickHandler(){
     console.log('CLIIIICK');
-  }
-
-  otherClickHandler(){
-    console.log(document.getElementsByClassName('modal-container'));
-    // document.getElementsByClassName('modal-container').style.visibility = 'visible';
   }
 
   render(){
@@ -35,9 +29,7 @@ class Listings extends React.Component {
         <div className="img-container" style={{transform: `translateX(${this.props.transform}%)`}}>
           <div onClick={this.clickHandler}>
             <img className="listing-img" src={data.room_img} alt="random pic"/>
-            <div>
-              <svg onClick={this.otherClickHandler} className="heart-icon" viewBox="0 0 24 24" fill="#484848" fillOpacity="0.5" stroke="#ffffff" strokeWidth="2" focusable="false" aria-label="Add listing to a list" role="img" strokeLinecap="round" strokeLinejoin="round" style={svgStyles}><path d="m17.5 2.9c-2.1 0-4.1 1.3-5.4 2.8-1.6-1.6-3.8-3.2-6.2-2.7-1.5.2-2.9 1.2-3.6 2.6-2.3 4.1 1 8.3 3.9 11.1 1.4 1.3 2.8 2.5 4.3 3.6.4.3 1.1.9 1.6.9s1.2-.6 1.6-.9c3.2-2.3 6.6-5.1 8.2-8.8 1.5-3.4 0-8.6-4.4-8.6" strokeLinejoin="round"></path></svg>
-            </div>
+            <LoveHeart />
           </div>
           <div className="info-container" onClick={this.clickHandler}>
             <p className="room-details-room-name">{data.roomname}</p>

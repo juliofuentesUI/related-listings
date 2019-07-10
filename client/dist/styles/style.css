@@ -137,8 +137,9 @@
 
 .heart-icon {
   position: absolute;
-  top: 75px;
-  left: 310px;
+  top: 13px;
+  left: 260px;
+  z-index: 1;
 }
 
 /* MODAL */
@@ -158,5 +159,5 @@
   top: 25%;
   left: 25%;
   box-shadow: 10px 10px 8px 10px #888888;
-  z-index: 1;
+  z-index: 2;
 }
