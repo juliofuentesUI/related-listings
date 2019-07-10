@@ -6,8 +6,15 @@ class App extends React.Component{
     super(props);
 
     this.state = {
-      roomInfo: []
+      roomInfo: [],
+      transform: 0,
+      count: 0
     }
+
+    this.translateXMinus = this.translateXMinus.bind(this);
+    this.translateXPlus = this.translateXPlus.bind(this);
+    this.addCount = this.addCount.bind(this);
+    this.subtractCount = this.subtractCount.bind(this);
   }
 
   componentDidMount(){
@@ -26,22 +33,55 @@ class App extends React.Component{
       })
   }
 
+  addCount(){
+    this.setState({
+      count: this.state.count + 1
+    })
+  }
+
+  subtractCount(){
+    this.setState({
+      count: this.state.count - 1
+    })
+  }
+
+  translateXMinus(){
+    this.setState({
+      transform: (this.state.transform - 104)
+    })
+  }
+
+  translateXPlus(){
+    this.setState({
+      transform: (this.state.transform + 104)
+    })
+  }
+
+  
   render(){
     return(
       <div className="main-container">
         <div className="button-container">
-          <div className="left-button"></div>
+          {this.state.count === 0 ? (
+            <div onClick={() => {this.subtractCount(), this.translateXPlus()}} className="left-button" style={{visibility: 'hidden'}}></div>
+          ) : (
+            <div onClick={() => {this.subtractCount(), this.translateXPlus()}} className="left-button"></div>
+          )}
         </div>
         <div className="related-listings">
           <div>
             <span className="rooms-title">More places to stay</span>
           </div>
           <div className="carousel-container">
-              <Carousel roomInfo={this.state.roomInfo}/>
+              <Carousel roomInfo={this.state.roomInfo} transform={this.state.transform} />
           </div>
         </div>
         <div className="button-container">
-          <div className="right-button"></div>
+          {this.state.count === 8 ? (
+            <div onClick={() => {this.addCount(), this.translateXMinus()}} className="right-button" style={{visibility: 'hidden'}}></div>
+          ) : (
+            <div onClick={() => {this.addCount(), this.translateXMinus()}} className="right-button"></div>
+          )}
         </div>
       </div>
     )
