@@ -43,14 +43,14 @@
 .listing-img {
   /* border: 1px solid black; */
   border-radius: 2%;
-  width: 300px;
+  width: 350px;
   height: 250px;
   cursor: pointer;
 }
 
 .related-listings {
   display: inline-block;
-  width: 930px;
+  width: 1080px;
   height: 50%;
   /* border: 1px solid black; */
   box-sizing: border-box;
@@ -62,7 +62,7 @@
 .carousel-container {
   display: flex;
   flex-flow: row;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 /* Information container */
@@ -89,15 +89,17 @@
   font-size: 16px;
   color: #484848;
   margin: 0 0 4px 0;
+  height: 20px;
 }
 
 .room-details-room-price {
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 18px;
   font-size: 14px;
   color: #484848;
   margin: 0;
+  height: 10px;
 }
 
 .room-details-star-image {
@@ -116,9 +118,9 @@
   display: inline-block;
   font-size: 12px;
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 16px;
-  margin-left: 8px;
+  margin-left: 2px;
 }
 
 /* image */
@@ -136,9 +138,10 @@
 /* heart image */
 
 .heart-icon {
+  cursor: pointer;
   position: absolute;
   top: 13px;
-  left: 260px;
+  left: 310px;
   z-index: 1;
 }
 
