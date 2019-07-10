@@ -47,13 +47,13 @@ class App extends React.Component{
 
   translateXMinus(){
     this.setState({
-      transform: (this.state.transform - 105)
+      transform: (this.state.transform - 104)
     })
   }
 
   translateXPlus(){
     this.setState({
-      transform: (this.state.transform + 105)
+      transform: (this.state.transform + 104)
     })
   }
 

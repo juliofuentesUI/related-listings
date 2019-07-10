@@ -19,7 +19,7 @@ class Listings extends React.Component {
   render(){
 
 
-    let datas = this.props.roomInfo.map((data) => {
+    let roomData = this.props.roomInfo.map((data) => {
       return(
         <div className="img-container" style={{transform: `translateX(${this.props.transform}%)`}}>
           <div onClick={this.clickHandler}>
@@ -83,7 +83,7 @@ class Listings extends React.Component {
         </div>
       )
     })
-    return datas;
+    return roomData;
   }
 }
 
