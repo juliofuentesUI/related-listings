@@ -7,7 +7,8 @@ class App extends React.Component{
 
     this.state = {
       roomInfo: [],
-      transform: 0
+      transform: 0,
+      count: 0
     }
 
     this.translateXMinus = this.translateXMinus.bind(this);
@@ -28,6 +29,18 @@ class App extends React.Component{
           roomInfo: reducedData
         })
       })
+  }
+
+  addCount(){
+    this.setState({
+      count: this.state.count + 1
+    })
+  }
+
+  subtractCount(){
+    this.setState({
+      count: this.state.count - 1
+    })
   }
 
   translateXMinus(){
@@ -53,7 +66,7 @@ class App extends React.Component{
             <span className="rooms-title">More places to stay</span>
           </div>
           <div className="carousel-container">
-              <Carousel roomInfo={this.state.roomInfo} transform={this.state.transform}/>
+              <Carousel roomInfo={this.state.roomInfo} transform={this.state.transform} count={this.state.count}/>
           </div>
         </div>
         <div className="button-container">
