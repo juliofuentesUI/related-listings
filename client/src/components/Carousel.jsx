@@ -7,14 +7,13 @@ class Carousel extends React.Component{
     super(props);
 
     this.state = {
-      roomInfo: [],
-      heartClicked: false
+      roomInfo: []
     }
   }
 
   render(){
     return(
-      <Listings roomInfo={this.props.roomInfo} heartClicked={this.heartClicked} transform={this.props.transform} />
+      <Listings roomInfo={this.props.roomInfo} heartClickedF={this.props.heartClickedF} heartClicked={this.props.heartClicked} transform={this.props.transform} />
     )
   }
 }

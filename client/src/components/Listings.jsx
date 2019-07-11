@@ -8,18 +8,18 @@ class Listings extends React.Component {
 
     this.state = {
       roomInfo: [],
-      heartClicked: false,
-      visibility: 'visible'
+      // heartClicked: false,
+      // visibility: 'visible'
     }
 
-    this.heartClickFunction = this.heartClickFunction.bind(this);
+    // this.heartClickFunction = this.heartClickFunction.bind(this);
   }
 
-  heartClickFunction(){
-    this.setState({
-      heartClicked: !this.state.heartClicked
-    })
-  }
+  // heartClickFunction(){
+  //   this.setState({
+  //     heartClicked: !this.state.heartClicked
+  //   })
+  // }
 
   newWindow(){
     console.log('hiii');
@@ -34,7 +34,7 @@ class Listings extends React.Component {
         <div className="img-container" style={{transform: `translateX(${this.props.transform}%)`}}>
           <div onClick={this.newWindow}>
             <img className="listing-img" src={data.room_img} alt="random pic"/>
-            <LoveHeart heartClicked={this.heartClickFunction}/>
+            <LoveHeart heartClickedF={this.props.heartClickedF} heartClicked={this.props.heartClicked}/>
           </div>
           <div className="info-container" onClick={this.newWindow}>
             <p className="room-details-room-name">{data.roomname}</p>
@@ -94,11 +94,13 @@ class Listings extends React.Component {
       )
     })
 
-    if(this.state.heartClicked){
-      return <Modal roomInfo={this.state.roomInfo} heartClicked={this.heartClickFunction} visible={this.state.visibility}/>
-    } else if (!this.state.heartClicked){
-      return roomData;
-    }
+    return roomData;
+
+    // if(this.state.heartClicked){
+    //   return <Modal roomInfo={this.state.roomInfo} heartClicked={this.heartClickFunction} visible={this.state.visibility}/>
+    // } else if (!this.state.heartClicked){
+    //   return roomData;
+    // }
   }
 }
 
