@@ -147,26 +147,55 @@
 
 /* MODAL */
 
-.x-button {
-  border-radius: 50%;
-  width: 20px;
-  height: 20px;
-}
+/* MODAL CONTAINER */
 
 .modal-container {
   /* visibility: hidden; */
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  position: relative;
   width: 40%;
-  height: 70%;
+  height: 85%;
   background-color: #fff;
   position: absolute;
-  top: 15%;
+  top: 8%;
   left: 30%;
-  box-shadow: 2px 2px 2px 2px #888888;
+  box-shadow: 0px 0px 3px 3px #888888;
   z-index: 2;
 }
 
 .modal-inner-container {
   padding: 4%;
+}
+
+/* MODAL EXIT BUTTON */
+
+.x-button {
+  cursor: pointer;
+}
+
+/* MODAL LINK - NEW LIST */
+.new-list-link {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+a.new-list-link:link {
+  color: #008489;
+}
+
+a.new-list-link:visited {
+  color: #008489;
+}
+
+/* MODAL HEADER */
+
+.modal-save {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #484848;
 }
 
 .modal-header {
@@ -175,25 +204,72 @@
 
 .modal-favorites {
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  color: #484848;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
+/* HORIZONTAL RULE */
+
+.horizontal-rule {
+  color: #484848;
+}
+
+/* MODAL FOOTER */
+
 .modal-footer {
+  position: absolute;
   font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
   background-color: #fff;
+  box-shadow: 0 -5px 5px -5px #333;
   cursor: pointer;
-  width: 100%;
-  margin-top: 43%;
-  margin-bottom: 5%;
+  width: 90%;
+  bottom: 3%;
+  padding-top: 3%;
 }
 
 .modal-inner-footer{
   display: flex;
   justify-content: space-around;
+  color: #484848;
+}
+
+.modal-footer-info{
+  width: 70%;
+  margin-left: 5%;
+}
+
+.small-img-container{
+  width: 30%;
 }
 
 .small-img {
-  width: 40%;
+  width: 100%;
   height: 100%;
+}
+
+/* Star container */
+
+.star-img {
+  width: 12px;
+  height: 12px;
+}
+
+.star-container-modal {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews-container-modal {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.modal-reviews {
+  margin-left: 4%;
 }
