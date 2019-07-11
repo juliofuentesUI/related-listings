@@ -154,13 +154,46 @@
 }
 
 .modal-container {
-  visibility: hidden;
-  width: 30%;
-  height: 60%;
+  /* visibility: hidden; */
+  width: 40%;
+  height: 70%;
   background-color: #fff;
   position: absolute;
-  top: 25%;
-  left: 25%;
-  box-shadow: 10px 10px 8px 10px #888888;
+  top: 15%;
+  left: 30%;
+  box-shadow: 2px 2px 2px 2px #888888;
   z-index: 2;
+}
+
+.modal-inner-container {
+  padding: 4%;
+}
+
+.modal-header {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.modal-favorites {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-footer {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  background-color: #fff;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 43%;
+  margin-bottom: 5%;
+}
+
+.modal-inner-footer{
+  display: flex;
+  justify-content: space-around;
+}
+
+.small-img {
+  width: 40%;
+  height: 100%;
 }

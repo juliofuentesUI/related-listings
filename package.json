@@ -1,5 +1,8 @@
 {
   "name": "",
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>testing/src/setupTests.js"] 
+  },
   "version": "",
   "description": "",
   "author": "",
