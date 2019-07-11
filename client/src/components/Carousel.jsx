@@ -1,5 +1,4 @@
 import React from 'react';
-import Modal from './Modal.jsx';
 import Listings from './Listings.jsx';
 const faker = require('faker');
 
@@ -11,23 +10,11 @@ class Carousel extends React.Component{
       roomInfo: [],
       heartClicked: false
     }
-
-    this.openModal = this.openModal.bind(this);
-  }
-
-  openModal(){
-    this.setState({
-      heartClicked: !this.state.heartClicked
-    })
   }
 
   render(){
     return(
-      !this.state.heartClicked ? (
-        <Listings roomInfo={this.props.roomInfo} heartClicker={this.openModal} transform={this.props.transform} />
-      ) : (
-        <Modal roomInfo={this.props.roomInfo} />
-      )
+      <Listings roomInfo={this.props.roomInfo} heartClicked={this.heartClicked} transform={this.props.transform} />
     )
   }
 }

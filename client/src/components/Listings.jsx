@@ -1,6 +1,6 @@
 import React from 'react';
-import Modal from './Modal.jsx';
 import LoveHeart from './LoveHeart.jsx';
+import Modal from './Modal.jsx';
 
 class Listings extends React.Component {
   constructor(props){
@@ -8,12 +8,21 @@ class Listings extends React.Component {
 
     this.state = {
       roomInfo: [],
-      heartClicked: false
+      heartClicked: false,
+      visibility: 'visible'
     }
+
+    this.heartClickFunction = this.heartClickFunction.bind(this);
   }
 
-  clickHandler(){
-    console.log('CLIIIICK');
+  heartClickFunction(){
+    this.setState({
+      heartClicked: !this.state.heartClicked
+    })
+  }
+
+  newWindow(){
+    console.log('hiii');
   }
 
   render(){
@@ -22,11 +31,11 @@ class Listings extends React.Component {
     let roomData = this.props.roomInfo.map((data) => {
       return(
         <div className="img-container" style={{transform: `translateX(${this.props.transform}%)`}}>
-          <div onClick={this.clickHandler}>
+          <div onClick={this.newWindow}>
             <img className="listing-img" src={data.room_img} alt="random pic"/>
-            <LoveHeart />
+            <LoveHeart heartClicked={this.heartClickFunction}/>
           </div>
-          <div className="info-container" onClick={this.clickHandler}>
+          <div className="info-container" onClick={this.newWindow}>
             <p className="room-details-room-name">{data.roomname}</p>
             <p className="room-details-room-info">{data.room_location}</p>
             <p className="room-details-room-price">${data.price}/night</p>
@@ -83,7 +92,23 @@ class Listings extends React.Component {
         </div>
       )
     })
-    return roomData;
+
+    if(this.state.heartClicked){
+      return <Modal roomInfo={this.state.roomInfo} heartClicked={this.heartClickFunction} visible={this.state.visibility}/>
+    } else if (!this.state.heartClicked){
+      return roomData;
+    }
+
+    // return roomData;
+
+    // this.state.
+
+    // return(
+    //   <div>
+    //     <Modal />
+    //     {roomData};
+    //   </div>
+    // );
   }
 }
 

@@ -16,3 +16,20 @@ describe('get /rooms/testing', () => {
     expect(response.body[0].first_name).toBe('amar');
   });
 });
+
+// button.test.js
+
+// let mock = jest.fn
+// const wrapper = shallow(<button fn={mock} />)
+// wrapper.simulate('click');
+// expect(mock.toBeInvoked)? WHAT?!?!?!??!
+// i don't understand. send halp. HAAAAAAALP. i die. :(
+
+// wrapper.instance(someMethod)
+// expect(wrapper.state().value).to.equal(thing)
+
+// shallow rendering only renders the parent and one child
+// full mounting -> mounts ENTIRE react app 
+
+
+// expect(wrapper)to.exist => IMPORTAAAAANT(but not good)

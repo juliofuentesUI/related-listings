@@ -1,5 +1,15 @@
 {
   "name": "",
+  "jest": {
+    "setupFilesAfterEnv": ["<rootDir>testing/src/setupTests.js"],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
   "version": "",
   "description": "",
   "author": "",
