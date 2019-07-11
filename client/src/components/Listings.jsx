@@ -23,6 +23,7 @@ class Listings extends React.Component {
 
   newWindow(){
     console.log('hiii');
+    // window.open('https://www.airbnb.com');
   }
 
   render(){
@@ -98,17 +99,6 @@ class Listings extends React.Component {
     } else if (!this.state.heartClicked){
       return roomData;
     }
-
-    // return roomData;
-
-    // this.state.
-
-    // return(
-    //   <div>
-    //     <Modal />
-    //     {roomData};
-    //   </div>
-    // );
   }
 }
 
