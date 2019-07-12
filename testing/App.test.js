@@ -7,23 +7,44 @@ import App from '../client/src/components/App.jsx';
 configure({ adapter: new Adapter() });
 
 describe('App Component', () => {
-  // it('renders correctly', done => {    
-  //   // fetch = jest.fn(() => new Promise(resolve => resolve()));
-  //   const div = document.createElement('div');
-  //   ReactDOM.render(<App />, div);
-  //   ReactDOM.unmountComponentAtNode(div);
-  //   done();
-  // });
-//   it('should have state', done =>{
-//     const wrapper = shallow(<App />);
-//     expect(wrapper.state()).toExist;
-//     done(); 
-// });
-
-  it('has clicking functionality', () => {
-    const mockClick = jest.fn();
-    const button = shallow(<svg onClick={mockClick}></svg>);
-    button.find('svg').simulate('click');
-    expect(mockClick.mock.calls.length).toBe(1);
+  it('renders correctly', done => {    
+    // fetch = jest.fn(() => new Promise(resolve => resolve()));
+    const options = {
+      disableLifecycleMethods: true
+    }
+    const wrapper = shallow(<App />, options)
+    const div = document.createElement('div');
+    ReactDOM.render(wrapper, div);
+    ReactDOM.unmountComponentAtNode(div);
+    done();
   });
+  it('should have state', done =>{
+    const options = {
+      disableLifecycleMethods: true
+    }
+    const wrapper = shallow(<App />, options)
+    expect(wrapper.state()).toExist;
+    done(); 
+});
+
+describe('left and right button', () => {
+  it('left button changes state', () => {
+    const options = {
+      disableLifecycleMethods: true
+    }
+    const wrapper = shallow(<App />, options)
+    wrapper.find('.left-button').simulate('click');
+    expect(wrapper.state().count).toBe(-1);
+  });
+
+  it('right button changes state', () => {
+    const options = {
+      disableLifecycleMethods: true
+    }
+    const wrapper = shallow(<App />, options)
+    wrapper.find('.right-button').simulate('click');
+    expect(wrapper.state().count).toBe(1);
+  });
+})
+
 });

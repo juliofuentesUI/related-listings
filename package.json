@@ -1,7 +1,9 @@
 {
   "name": "",
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>testing/src/setupTests.js"],
+    "setupFilesAfterEnv": [
+      "<rootDir>testing/src/setupTests.js"
+    ],
     "moduleFileExtensions": [
       "js",
       "jsx"
@@ -21,10 +23,16 @@
     "build": "webpack -d --watch",
     "start": "nodemon server/index.js",
     "seed": "node ./server/db/seed.js",
-    "test": "jest"
+    "test": "jest",
+    "testCoverage": "jest --coverage"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
+    "eslint": "^6.0.1",
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.2",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "mysql": "^2.17.1",
@@ -41,7 +49,7 @@
     "babel-loader": "^8.0.6",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-config": "https://github.com/airbnb/javascript",
     "jest": "^24.8.0",
     "supertest": "^4.0.2",
     "webpack": "^4.35.2",
