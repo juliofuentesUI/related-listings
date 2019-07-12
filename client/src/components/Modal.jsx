@@ -60,7 +60,7 @@ class Modal extends React.Component {
             <div className="modal-footer">
               <div className="modal-inner-footer">
                 <div className="small-img-container">
-                  <img className="small-img" src="https://loremflickr.com/320/240/dog" alt="Room image"></img>
+                  <img className="small-img" src="https://fec-hrsf119.s3-us-west-1.amazonaws.com/im1.jpg" alt="Room image"></img>
                 </div>
                 <div className="modal-footer-info">
                   <span><p className="modal-roomname">ENTIRE VILLA - Atami-Shi</p></span>
