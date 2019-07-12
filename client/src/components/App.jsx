@@ -1,6 +1,7 @@
 import React from "react";
 import Carousel from "./Carousel.jsx";
 import Modal from "./Modal.jsx";
+import styles from "../app.css";
 
 class App extends React.Component{
   constructor(props){
@@ -65,32 +66,31 @@ class App extends React.Component{
       heartClicked: !this.state.heartClicked
     })
   }
-  
   render(){
     return(
       this.state.heartClicked ? (
         <div>
-          <div className="main-container" style={{opacity: '0.5'}}>
-            <div className="button-container">
+          <div style={{opacity: '0.5'}}>
+            <div className={styles.buttonContainer}>
               {this.state.count === 0 ? (
-                <div onClick={() => {this.subtractCount(), this.translateXPlus()}} className="left-button" style={{visibility: 'hidden'}}></div>
+                <div className={styles.leftButton} onClick={() => {this.subtractCount(), this.translateXPlus()}} style={{visibility: 'hidden'}}></div>
               ) : (
-                <div onClick={() => {this.subtractCount(), this.translateXPlus()}} className="left-button"></div>
+                <div className={styles.leftButton} onClick={() => {this.subtractCount(), this.translateXPlus()}} style={{backgroundImage: "url('https://fec-hrsf119.s3-us-west-1.amazonaws.com/arrowLeft.png')"}}></div>
               )}
             </div>
-            <div className="related-listings">
+            <div className={styles.relatedListings}>
               <div>
-                <span className="rooms-title">More places to stay</span>
+                <span className={styles.roomsTitle}>More places to stay</span>
               </div>
-              <div className="carousel-container">
+              <div className={styles.carouselContainer}>
                   <Carousel roomInfo={this.state.roomInfo} transform={this.state.transform} heartClickedF={this.heartClickFunction} heartClicked={this.state.heartClicked}/>
               </div>
             </div>
-            <div className="button-container">
+            <div className={styles.buttonContainer}>
               {this.state.count === 8 ? (
-                <div onClick={() => {this.addCount(), this.translateXMinus()}} className="right-button" style={{visibility: 'hidden'}}></div>
+                <div className={styles.rightButton} onClick={() => {this.addCount(), this.translateXMinus()}} style={{visibility: 'hidden'}}></div>
               ) : (
-                <div onClick={() => {this.addCount(), this.translateXMinus()}} className="right-button"></div>
+                <div className={styles.rightButton} onClick={() => {this.addCount(), this.translateXMinus()}} style={{backgroundImage: "url('https://fec-hrsf119.s3-us-west-1.amazonaws.com/arrowRight.png')"}}></div>
               )}
             </div>
           </div>
@@ -98,27 +98,27 @@ class App extends React.Component{
         </div>
       ) : (
         <div>
-          <div className="main-container">
-            <div className="button-container">
+          <div>
+            <div className={styles.buttonContainer}>
               {this.state.count === 0 ? (
-                <div onClick={() => {this.subtractCount(), this.translateXPlus()}} className="left-button" style={{visibility: 'hidden'}}></div>
+                <div className={styles.leftButton} onClick={() => {this.subtractCount(), this.translateXPlus()}} style={{visibility: 'hidden'}}></div>
               ) : (
-                <div onClick={() => {this.subtractCount(), this.translateXPlus()}} className="left-button"></div>
+                <div className={styles.leftButton} onClick={() => {this.subtractCount(), this.translateXPlus()}} style={{backgroundImage: "url('https://fec-hrsf119.s3-us-west-1.amazonaws.com/arrowLeft.png')"}}></div>
               )}
             </div>
-            <div className="related-listings">
+            <div className={styles.relatedListings}>
               <div>
-                <span className="rooms-title">More places to stay</span>
+                <span className={styles.roomsTitle}>More places to stay</span>
               </div>
-              <div className="carousel-container">
+              <div className={styles.carouselContainer}>
                   <Carousel roomInfo={this.state.roomInfo} transform={this.state.transform} heartClickedF={this.heartClickFunction} heartClicked={this.state.heartClicked}/>
               </div>
             </div>
-            <div className="button-container">
+            <div className={styles.buttonContainer}>
               {this.state.count === 8 ? (
-                <div onClick={() => {this.addCount(), this.translateXMinus()}} className="right-button" style={{visibility: 'hidden'}}></div>
+                <div className={styles.rightButton} onClick={() => {this.addCount(), this.translateXMinus()}} style={{visibility: 'hidden'}}></div>
               ) : (
-                <div onClick={() => {this.addCount(), this.translateXMinus()}} className="right-button"></div>
+                <div className={styles.rightButton} onClick={() => {this.addCount(), this.translateXMinus()}} style={{backgroundImage: "url('https://fec-hrsf119.s3-us-west-1.amazonaws.com/arrowRight.png')"}}></div>
               )}
             </div>
           </div>        
