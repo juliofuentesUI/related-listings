@@ -25,28 +25,29 @@ const ModalFooter = (props) => {
                     </div>
                   </div>
                   <div>
-            <p className={styles.modalReviews}>reviews</p>
           </div>
+          <div className={styles.modalAboutSection}>
           <hr className={styles.horizontalRule}></hr>
-          <div className="modal-about-listing modal-reviews-containers">
-            <h2 className={styles.modalReviewsTitles}>About this listing</h2>
-            <p>{faker.lorem.paragraphs()}</p>
+            <div className={`${styles.modalAboutListing} ${styles.modalReviewsContainers}`}>
+              <h2 className={styles.modalReviewsTitles}>About this listing</h2>
+              <p className={styles.modalReviewsPara}>{faker.lorem.paragraphs()}</p>
+            </div>
+            <hr className={styles.horizontalRule}></hr>
+            <div className={`${styles.modalAboutSpace} ${styles.modalReviewsContainers}`}>
+              <h2 className={styles.modalReviewsTitles}>About space</h2>
+              <p className={styles.modalReviewsPara}>{faker.lorem.sentences()}</p>
+            </div>
+            <hr className={styles.horizontalRule}></hr>
+            <div className={`${styles.modalAboutNeighborhoods} ${styles.modalReviewsContainers}`}>
+              <h2 className={styles.modalReviewsTitles}>Neighborhood</h2>
+              <p className={styles.modalReviewsPara}>{faker.lorem.paragraph()}</p>
+            </div>
+            <hr className={styles.horizontalRule}></hr>
+            <div className={styles.modalReviewsContainers}>
+              <h2 className={styles.modalReviewsTitles}>Reviews</h2>
+              <p className={styles.modalReviewsPara}>{faker.lorem.paragraphs()}</p>
+            </div>
           </div>
-          <hr className={styles.horizontalRule}></hr>
-          <div className="modal-about-space modal-reviews-containers">
-            <h2 className={styles.modalReviewsTitles}>About space</h2>
-            <p>{faker.lorem.sentences()}</p>
-          </div>
-          <hr className={styles.horizontalRule}></hr>
-          <div className="modal-neighborhood modal-reviews-containers">
-            <h2 className={styles.modalReviewsTitles}>Neighborhood</h2>
-            <p>{faker.lorem.paragraph()}</p>
-          </div>
-          <hr className={styles.horizontalRule}></hr>
-          <div className="modal-reviews-containers">
-            <h2 className={styles.modalReviewsTitles}>Reviews</h2>
-            {/* IMPORT A REVIEWS MODAL HURRRR */}
-        </div>
         </div>
     </div>
   )

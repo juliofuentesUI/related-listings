@@ -9,18 +9,8 @@ class Listings extends React.Component {
 
     this.state = {
       roomInfo: [],
-      // heartClicked: false,
-      // visibility: 'visible'
     }
-
-    // this.heartClickFunction = this.heartClickFunction.bind(this);
   }
-
-  // heartClickFunction(){
-  //   this.setState({
-  //     heartClicked: !this.state.heartClicked
-  //   })
-  // }
 
   newWindow(){
     console.log('hiii');
@@ -28,8 +18,6 @@ class Listings extends React.Component {
   }
 
   render(){
-
-
     let roomData = this.props.roomInfo.map((data) => {
       return(
         <div className={styles.imgContainer} style={{transform: `translateX(${this.props.transform}%)`}}>

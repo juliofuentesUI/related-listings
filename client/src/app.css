@@ -6,7 +6,6 @@
 }
 
 .leftButton {
-  /* background-image: url('https://fec-hrsf119.s3-us-west-1.amazonaws.com/arrowLeft.png'); */
   color: rgba(0, 0, 0, 0.847);
   cursor: pointer;
   width: 40px;
@@ -14,7 +13,6 @@
 }
 
 .rightButton {
-  /* background-image: url('https://fec-hrsf119.s3-us-west-1.amazonaws.com/arrowRight.png'); */
   color: rgba(0, 0, 0, 0.847);
   cursor: pointer;
   width: 40px;
@@ -284,6 +282,8 @@ a.newListLink:visited {
   justify-content: space-between;
 }
 
+
+/* Modal Reviews */
 .reviewsContainerModal {
   width: 70%;
   display: flex;
@@ -291,12 +291,26 @@ a.newListLink:visited {
   align-items: center;
 }
 
-/* Modal Reviews */
-
 .modalReviewsContainers {
   padding: 5%;
 }
 
+.modalAboutSection {
+  margin-left: 5%;
+  width: 90%;
+  height: 100%;
+}
+
 .modalReviewsTitles {
-  font-weight: 600
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #484848;
+}
+
+.modalReviewsPara {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #484848;
 }
