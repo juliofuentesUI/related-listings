@@ -70,7 +70,7 @@ class App extends React.Component{
     return(
       this.state.heartClicked ? (
         <div>
-          <div style={{opacity: '0.5'}}>
+          <div style={{opacity: '0.3'}}>
             <div className={styles.buttonContainer}>
               {this.state.count === 0 ? (
                 <div className={styles.leftButton} onClick={() => {this.subtractCount(), this.translateXPlus()}} style={{visibility: 'hidden'}}></div>
