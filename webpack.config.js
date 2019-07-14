@@ -10,10 +10,11 @@ module.exports = {
     filename: 'bundle.js',
     path: outputPoint,
   },
-  module : {
+  module: {
     rules: [
       { test: /\.(js|jsx)$/, exclude: /node_modules/, loader: 'babel-loader' },
-      { test: /\.css$/, 
+      {
+        test: /\.css$/,
         use: [
           'style-loader',
           {
@@ -24,8 +25,9 @@ module.exports = {
               },
             },
           },
-        ]},
+        ],
+      },
     ],
   },
   mode: 'development',
-}
+};
