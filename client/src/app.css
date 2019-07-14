@@ -1,0 +1,318 @@
+/* buttons */
+
+.buttonContainer {
+  display: inline-block;
+  transform: translateY(-200px);
+}
+
+.leftButton {
+  color: rgba(0, 0, 0, 0.847);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.rightButton {
+  color: rgba(0, 0, 0, 0.847);
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+/* room listings title */
+
+.roomsTitle {  
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #484848;
+}
+
+/* room listings main container */
+
+.listingImg {
+  border-radius: 2%;
+  width: 350px;
+  height: 250px;
+  cursor: pointer;
+}
+
+.relatedListings {
+  display: inline-block;
+  width: 1088px;
+  height: 50%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* carousel container */
+
+.carouselContainer {
+  display: flex;
+  flex-flow: row;
+  margin-top: 2%;
+}
+
+/* Information container */
+
+.infoContainer {
+  cursor: pointer;
+}
+
+/* room details */
+
+.roomDetailsRoomName {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  line-height: 16px;
+  font-size: 12px;
+  color: #767676;
+  margin: 0;
+}
+
+.roomDetailsRoomInfo {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  line-height: 22px;
+  font-size: 16px;
+  color: #484848;
+  margin: 0 0 4px 0;
+  height: 20px;
+}
+
+.roomDetailsRoomPrice {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 300;
+  line-height: 18px;
+  font-size: 14px;
+  color: #484848;
+  margin: 0;
+  height: 10px;
+}
+
+.roomDetailsStarImage {
+  display: inline-block;
+  margin: 0;
+}
+
+/* Review Star Image */
+
+.starImg {
+ height: 10px;
+}
+
+.starNumber {
+  color: #484848;
+  display: inline-block;
+  font-size: 12px;
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  line-height: 16px;
+  margin-left: 2px;
+}
+
+/* image */
+
+.imgContainer {
+  margin-right: 15px;
+  border-radius: 1%;
+  transition: 500ms ease-in-out;
+}
+
+.listingImg{
+  position: relative;
+}
+
+/* heart image */
+
+.heartIcon {
+  cursor: pointer;
+  position: absolute;
+  top: 13px;
+  left: 310px;
+  z-index: 1;
+}
+
+/* MODAL */
+
+/* MODAL CONTAINER */
+
+.modalContainer {
+  visibility: hidden;
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  position: relative;
+  width: 568px;
+  height: 618.5px;
+  background-color: #fff;
+  position: absolute;
+  top: 8%;
+  left: 26%;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.modalInnerContainer {
+  padding: 4%;
+}
+
+/* MODAL EXIT BUTTON */
+
+.xButton {
+  cursor: pointer;
+}
+
+/* MODAL LINK - NEW LIST */
+.newListLink {
+  text-decoration: none;
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+a.newListLink:link {
+  color: #008489;
+}
+
+a.newListLink:visited {
+  color: #008489;
+}
+
+/* MODAL HEADER */
+
+.modalSave {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  color: #484848;
+}
+
+.modalHeader {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+}
+
+.modalFavorites {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  color: #484848;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* HORIZONTAL RULE */
+
+.horizontalRule {
+  color: #484848;
+  opacity: 20%;
+}
+
+/* MODAL FOOTER */
+
+.modalFooter {
+  position: absolute;
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  background-color: #fff;
+  -webkit-box-shadow: 0px -4px 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px -4px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px -6px 15px -5px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  overflow-y: hidden;
+}
+
+.modalInnerFooter{
+  display: flex;
+  justify-content: space-around;
+  color: #484848;
+  padding: 5%;
+}
+
+.modalFooterInfo{
+  width: 70%;
+  margin-left: 5%;
+}
+
+.smallImgContainer{
+  width: 100px;
+  height: 75px;
+}
+
+.smallImg {
+  width: 100%;
+  height: 100%;
+}
+
+/* MODAL FOOTER INFO */
+
+.modalRoomname {
+  font-family: Circular, -apple-system, system-ui, Roboto, "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  line-height: 10px;
+  font-weight: 600;
+}
+
+.modalRoomLocation{
+  font-size: 12px;
+  line-height: 10px;
+  font-weight: 400;
+  color: #484848;
+}
+
+.modalReviews {
+  font-size: 14px;
+  line-height: 12px;
+  color: #484848;
+  font-weight: 600;
+  margin-left: 4%;
+}
+
+/* Star container */
+
+.starImg {
+  width: 12px;
+  height: 12px;
+}
+
+.starContainerModal {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+/* Modal Reviews */
+.reviewsContainerModal {
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.modalReviewsContainers {
+  padding: 5%;
+}
+
+.modalAboutSection {
+  margin-left: 5%;
+  width: 90%;
+  height: 100%;
+}
+
+.modalReviewsTitles {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #484848;
+}
+
+.modalReviewsPara {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #484848;
+}

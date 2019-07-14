@@ -1,17 +1,18 @@
-import React from "react";
-import Carousel from "./Carousel.jsx";
-import Modal from "./Modal.jsx";
+import React from 'react';
+import Carousel from './Carousel.jsx';
+import Modal from './Modal.jsx';
+import styles from '../app.css';
 
-class App extends React.Component{
-  constructor(props){
+class App extends React.Component {
+  constructor(props) {
     super(props);
 
     this.state = {
       roomInfo: [],
       transform: 0,
       count: 0,
-      heartClicked: false
-    }
+      heartClicked: false,
+    };
 
     this.translateXMinus = this.translateXMinus.bind(this);
     this.translateXPlus = this.translateXPlus.bind(this);
@@ -20,112 +21,112 @@ class App extends React.Component{
     this.heartClickFunction = this.heartClickFunction.bind(this);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     const reducedData = [];
     fetch('/rooms/related-listings')
       .then(res => res.json())
-      .then(json => {
-        json.forEach(data => {
-          if(reducedData.length <= 10){
+      .then((json) => {
+        json.forEach((data) => {
+          if (reducedData.length <= 10) {
             reducedData.push(data);
           }
-        })
+        });
         this.setState({
-          roomInfo: reducedData
-        })
-      })
+          roomInfo: reducedData,
+        });
+      });
   }
 
-  addCount(){
+  addCount() {
     this.setState({
-      count: this.state.count + 1
-    })
+      count: this.state.count + 1,
+    });
   }
 
-  subtractCount(){
+  subtractCount() {
     this.setState({
-      count: this.state.count - 1
-    })
+      count: this.state.count - 1,
+    });
   }
 
-  translateXMinus(){
+  translateXMinus() {
     this.setState({
-      transform: (this.state.transform - 104)
-    })
+      transform: (this.state.transform - 104),
+    });
   }
 
-  translateXPlus(){
+  translateXPlus() {
     this.setState({
-      transform: (this.state.transform + 104)
-    })
+      transform: (this.state.transform + 104),
+    });
   }
 
-  heartClickFunction(){
+  heartClickFunction() {
     this.setState({
-      heartClicked: !this.state.heartClicked
-    })
+      heartClicked: !this.state.heartClicked,
+    });
   }
-  
-  render(){
-    return(
+
+  render() {
+    return (
       this.state.heartClicked ? (
         <div>
-          <div className="main-container" style={{opacity: '0.5'}}>
-            <div className="button-container">
+          <div style={{ opacity: '0.3' }}>
+            <div className={styles.buttonContainer}>
               {this.state.count === 0 ? (
-                <div onClick={() => {this.subtractCount(), this.translateXPlus()}} className="left-button" style={{visibility: 'hidden'}}></div>
+                <div className={styles.leftButton} onClick={() => { this.subtractCount(), this.translateXPlus(); }} style={{ visibility: 'hidden' }} />
               ) : (
-                <div onClick={() => {this.subtractCount(), this.translateXPlus()}} className="left-button"></div>
+                <div className={styles.leftButton} onClick={() => { this.subtractCount(), this.translateXPlus(); }} style={{ backgroundImage: "url('https://fec-hrsf119.s3-us-west-1.amazonaws.com/arrowLeft.png')" }} />
               )}
             </div>
-            <div className="related-listings">
+            <div className={styles.relatedListings}>
               <div>
-                <span className="rooms-title">More places to stay</span>
+                <span className={styles.roomsTitle}>More places to stay</span>
               </div>
-              <div className="carousel-container">
-                  <Carousel roomInfo={this.state.roomInfo} transform={this.state.transform} heartClickedF={this.heartClickFunction} heartClicked={this.state.heartClicked}/>
+              <div className={styles.carouselContainer}>
+                <Carousel roomInfo={this.state.roomInfo} transform={this.state.transform} heartClickedF={this.heartClickFunction} heartClicked={this.state.heartClicked} />
               </div>
             </div>
-            <div className="button-container">
+            <div className={styles.buttonContainer}>
               {this.state.count === 8 ? (
-                <div onClick={() => {this.addCount(), this.translateXMinus()}} className="right-button" style={{visibility: 'hidden'}}></div>
+                <div className={styles.rightButton} onClick={() => { this.addCount(), this.translateXMinus() ;}} style={{ visibility: 'hidden' }} />
               ) : (
-                <div onClick={() => {this.addCount(), this.translateXMinus()}} className="right-button"></div>
+                <div className={styles.rightButton} onClick={() => { this.addCount(), this.translateXMinus(); }} style={{ backgroundImage: "url('https://fec-hrsf119.s3-us-west-1.amazonaws.com/arrowRight.png')" }} />
               )}
             </div>
           </div>
-            <Modal roomInfo={this.state.roomInfo} heartClicked={this.state.heartClicked} heartClickedF={this.heartClickFunction} visibility={'visible'}/>
+          <Modal roomInfo={this.state.roomInfo} heartClicked={this.state.heartClicked} heartClickedF={this.heartClickFunction} visibility="visible" />
         </div>
       ) : (
         <div>
-          <div className="main-container">
-            <div className="button-container">
+          <div>
+            <div className={styles.buttonContainer}>
               {this.state.count === 0 ? (
-                <div onClick={() => {this.subtractCount(), this.translateXPlus()}} className="left-button" style={{visibility: 'hidden'}}></div>
+                <div className={styles.leftButton} onClick={() => { this.subtractCount(), this.translateXPlus(); }} style={{ visibility: 'hidden' }} />
               ) : (
-                <div onClick={() => {this.subtractCount(), this.translateXPlus()}} className="left-button"></div>
+                <div className={styles.leftButton} onClick={() => { this.subtractCount(), this.translateXPlus() ;}} style={{ backgroundImage: "url('https://fec-hrsf119.s3-us-west-1.amazonaws.com/arrowLeft.png')" }} />
               )}
             </div>
-            <div className="related-listings">
+            <div className={styles.relatedListings}>
               <div>
-                <span className="rooms-title">More places to stay</span>
+                <span className={styles.roomsTitle}>More places to stay</span>
               </div>
-              <div className="carousel-container">
-                  <Carousel roomInfo={this.state.roomInfo} transform={this.state.transform} heartClickedF={this.heartClickFunction} heartClicked={this.state.heartClicked}/>
+              <div className={styles.carouselContainer}>
+                <Carousel roomInfo={this.state.roomInfo} transform={this.state.transform} heartClickedF={this.heartClickFunction} heartClicked={this.state.heartClicked} />
               </div>
             </div>
-            <div className="button-container">
+            <div className={styles.buttonContainer}>
               {this.state.count === 8 ? (
-                <div onClick={() => {this.addCount(), this.translateXMinus()}} className="right-button" style={{visibility: 'hidden'}}></div>
+                <div className={styles.rightButton} onClick={() => { this.addCount(), this.translateXMinus(); }} style={{ visibility: 'hidden' }} />
               ) : (
-                <div onClick={() => {this.addCount(), this.translateXMinus()}} className="right-button"></div>
+                <div className={styles.rightButton} onClick={() => { this.addCount(), this.translateXMinus(); }} style={{ backgroundImage: "url('https://fec-hrsf119.s3-us-west-1.amazonaws.com/arrowRight.png')" }} />
               )}
             </div>
-          </div>        
-            <Modal visibility={'hidden'}/>
+          </div>
+          <Modal visibility="hidden" />
         </div>
       )
-    )
+    );
   }
 }
 
