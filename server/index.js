@@ -9,6 +9,11 @@ const PORT = 3001;
 app.use(express.static(path.resolve(__dirname, '..', 'client', 'dist')));
 app.use(bodyParser.urlencoded({ extended: false}));
 
+app.all('/*', (req,res,next) => {
+  res.set('Access-Control-Allow-Origin', '*');
+  next();
+})
+
 app.get('/rooms/testing', (req, res) => {
   let queryString = "SELECT * FROM user_info_testing";
   db.query(queryString, (err, rows, fields) => {
