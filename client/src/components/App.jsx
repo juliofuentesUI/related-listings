@@ -23,7 +23,7 @@ class App extends React.Component {
 
   componentDidMount() {
     const reducedData = [];
-    fetch('http://localhost:3001/rooms/related-listings')
+    fetch('/rooms/related-listings')
       .then(res => res.json())
       .then((json) => {
         json.forEach((data) => {
