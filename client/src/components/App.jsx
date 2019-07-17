@@ -23,18 +23,21 @@ class App extends React.Component {
 
   componentDidMount() {
     const reducedData = [];
-    fetch('/rooms/related-listings')
-      .then(res => res.json())
-      .then((json) => {
-        json.forEach((data) => {
-          if (reducedData.length <= 10) {
-            reducedData.push(data);
-          }
+    let randomStart = Math.floor(Math.random() * 88);
+    for(var i = randomStart; i <= 100; i++){
+      fetch(`/rooms/related-listings/${i}`)
+        .then(res => res.json())
+        .then((json) => {
+          json.forEach((data) => {
+            if (reducedData.length <= 10) {
+              reducedData.push(data);
+            }
+          });
+          this.setState({
+            roomInfo: reducedData,
+          });
         });
-        this.setState({
-          roomInfo: reducedData,
-        });
-      });
+    }
   }
 
   addCount() {
